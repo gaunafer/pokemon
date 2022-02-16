@@ -18,6 +18,8 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-core', version: '1.1.49'
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.6.6'
 }
 
 tasks.named('test') {

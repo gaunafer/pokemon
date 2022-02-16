@@ -1,8 +1,9 @@
-package com.pokemon.web.app.entity;
+package com.pokemon.web.app.service.consumer;
 
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.pokemon.web.app.entity.Pokemon;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PokemonListResponse {

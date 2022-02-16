@@ -1,7 +1,7 @@
-package com.pokemon.web.app.entity;
+package com.pokemon.web.app.service.consumer;
 
 import java.util.List;
-import java.util.Map;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

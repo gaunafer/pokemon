@@ -1,4 +1,4 @@
-package com.pokemon.web.app.entity;
+package com.pokemon.web.app.service.consumer;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
