@@ -24,7 +24,6 @@ public class PokemonConsumer {
 		List<Pokemon> pokes = new ArrayList<Pokemon>();
 		for (Pokemon p : response.getResults()) {
 			pokes.add(this.findOne(p.getName()));
-			System.out.println(pokes.get(pokes.size()-1).getName());
 		}
 		
 		

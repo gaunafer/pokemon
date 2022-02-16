@@ -19,8 +19,6 @@ import org.springframework.web.client.RestTemplate;
 
 
 import com.pokemon.web.app.entity.Pokemon;
-import com.pokemon.web.app.entity.PokemonListResponse;
-import com.pokemon.web.app.entity.PokemonSpecificResponse;
 import com.pokemon.web.app.service.consumer.PokemonConsumer;
 
 
