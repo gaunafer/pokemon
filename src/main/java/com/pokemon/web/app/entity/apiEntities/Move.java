@@ -1,14 +1,13 @@
-package com.pokemon.web.app.service.consumer;
+package com.pokemon.web.app.entity.apiEntities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Ability {
-	public Ability() {
+public class Move {
+	public Move() {
 		
 	}
 	private String name;
-	
 	
 	public String getName() {
 		return name;

@@ -1,4 +1,4 @@
-package com.pokemon.web.app.service.consumer;
+package com.pokemon.web.app.entity.apiEntities;
 
 import java.util.ArrayList;
 import java.util.List;
