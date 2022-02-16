@@ -20,20 +20,20 @@ public class PokemonConsumer {
 		
 		RestTemplate restTemplate = new RestTemplate();
 		PokemonListResponse response = new PokemonListResponse();
-		response = restTemplate.getForObject("https://pokeapi.co/api/v2/pokemon?offset=0&limit=10", PokemonListResponse.class);
+		response = restTemplate.getForObject("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000", PokemonListResponse.class);
 		List<Pokemon> pokes = new ArrayList<Pokemon>();
 		for (Pokemon p : response.getResults()) {
 			pokes.add(this.findOne(p.getName()));
 		}
-/*
+
 		while (response.getNext() != null) {
 			response = restTemplate.getForObject(response.getNext(), PokemonListResponse.class);
 			for (Pokemon p : response.getResults()) {
 				pokes.add(this.findOne(p.getName()));
 			}
-		}*/
+		}
 		return pokes;
-		//return (Pokemon[]) pokes;
+
 	}
 	public Pokemon findOne(String idOrName) {
 		RestTemplate restTemplate = new RestTemplate();
