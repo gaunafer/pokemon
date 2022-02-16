@@ -22,12 +22,17 @@ public class PokemonConsumer {
 		PokemonListResponse response = new PokemonListResponse();
 		response = restTemplate.getForObject("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000", PokemonListResponse.class);
 		List<Pokemon> pokes = new ArrayList<Pokemon>();
-		pokes = response.getResults().stream().map(p -> findOne(p.getName())).collect(Collectors.toList());
-		List<Pokemon> tmp = new ArrayList<Pokemon>();
+		for (Pokemon p : response.getResults()) {
+			pokes.add(this.findOne(p.getName()));
+			System.out.println(pokes.get(pokes.size()-1).getName());
+		}
+		
+		
 		while (response.getNext() != null) {
 			response = restTemplate.getForObject(response.getNext(), PokemonListResponse.class);
-			tmp = response.getResults().stream().map(p -> findOne(p.getName())).collect(Collectors.toList());
-			pokes = Stream.concat(pokes.stream(), tmp.stream()).collect(Collectors.toList());
+			for (Pokemon p : response.getResults()) {
+				pokes.add(this.findOne(p.getName()));
+			}
 		}
 		return pokes;
 		//return (Pokemon[]) pokes;
